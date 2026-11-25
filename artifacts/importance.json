@@ -1,0 +1,47 @@
+{
+  "gini": {
+    "loan_amount": 0.031434009953661385,
+    "property_value": 0.04817211207095599,
+    "loan_to_value": 0.10929545062494314,
+    "income_k": 0.04769799386204254,
+    "debt_to_income": 0.5565136836698407,
+    "loan_term_months": 0.009435577367962281,
+    "loan_type": 0.12875808896478283,
+    "occupancy": 0.003937943010522154,
+    "manufactured_home": 0.003879240955796852,
+    "applicant_age": 0.013106552375027255,
+    "has_coapplicant": 0.003450233980332234,
+    "tract_income_pct_of_area": 0.027468769426919316,
+    "tract_median_housing_age": 0.016850343737213176
+  },
+  "permutation_mean": {
+    "loan_amount": 0.029793191883586378,
+    "property_value": 0.0636186699462865,
+    "loan_to_value": 0.05063675250921048,
+    "income_k": 0.011091420479977954,
+    "debt_to_income": 0.15397555725562095,
+    "loan_term_months": 0.0023025476233515586,
+    "loan_type": 0.01987396651086316,
+    "occupancy": 0.005480359940433122,
+    "manufactured_home": 0.0009638725338291465,
+    "applicant_age": 0.010226434188100365,
+    "has_coapplicant": 0.008161427667596333,
+    "tract_income_pct_of_area": 0.010432037194848975,
+    "tract_median_housing_age": 0.004621409956788181
+  },
+  "permutation_std": {
+    "loan_amount": 0.0026751631812222286,
+    "property_value": 0.004477469054533758,
+    "loan_to_value": 0.002799565197957779,
+    "income_k": 0.0011808819330776745,
+    "debt_to_income": 0.003922382571277222,
+    "loan_term_months": 0.0004057399647245606,
+    "loan_type": 0.0017214758858794068,
+    "occupancy": 0.0013137686323030355,
+    "manufactured_home": 0.0003540024513393407,
+    "applicant_age": 0.001948446083913704,
+    "has_coapplicant": 0.002013782054608606,
+    "tract_income_pct_of_area": 0.002138861899136276,
+    "tract_median_housing_age": 0.0010138421925411226
+  }
+}

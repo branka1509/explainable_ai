@@ -1,0 +1,311 @@
+{
+  "question": "Which inputs do we need from a client requesting a mortgage?",
+  "note": "Fictional bank and policy. The assistant's answers for each setting were generated once with an LLM (Claude) and saved for this class, so everyone sees the same results.",
+  "sources": {
+    "1": {
+      "title": "Lending policy p. 4 · Identity & income",
+      "text": "Applicants provide a valid passport or ID card and a certificate of residence. Employed applicants submit their last three salary statements and the most recent tax return."
+    },
+    "2": {
+      "title": "Lending policy p. 7 · Creditworthiness",
+      "text": "Every applicant provides an extract from the debt enforcement register, not older than three months, and completes the signed Lakeside self-disclosure form HB-12."
+    },
+    "3": {
+      "title": "Lending policy p. 9 · Own funds",
+      "text": "At least 20% of the purchase price comes from own funds, of which at most 10% may come from pension fund (2nd pillar) assets. Proof: bank statements or a pension fund confirmation."
+    },
+    "4": {
+      "title": "Lending policy p. 12 · Property",
+      "text": "Required for the property: the purchase agreement (signed or draft), a recent land register extract and a valuation by a Lakeside-approved valuer."
+    }
+  },
+  "items": {
+    "a": {
+      "text": "A valid passport or ID card and a certificate of residence",
+      "cite": "1"
+    },
+    "b": {
+      "text": "Your last three salary statements and the most recent tax return",
+      "cite": "1"
+    },
+    "c": {
+      "text": "An extract from the debt enforcement register, not older than three months",
+      "cite": "2"
+    },
+    "d": {
+      "text": "The signed Lakeside self-disclosure form HB-12",
+      "cite": "2"
+    },
+    "e": {
+      "text": "Proof of own funds: at least 20% of the price, at most 10% from pension assets",
+      "cite": "3"
+    },
+    "f": {
+      "text": "The purchase agreement and a recent land register extract",
+      "cite": "4"
+    },
+    "g": {
+      "text": "A valuation by a Lakeside-approved valuer",
+      "cite": "4"
+    }
+  },
+  "settings": {
+    "none": {
+      "label": "Nothing removed (full policy)",
+      "answer": [
+        {
+          "id": "a",
+          "status": "same"
+        },
+        {
+          "id": "b",
+          "status": "same"
+        },
+        {
+          "id": "c",
+          "status": "same"
+        },
+        {
+          "id": "d",
+          "status": "same"
+        },
+        {
+          "id": "e",
+          "status": "same"
+        },
+        {
+          "id": "f",
+          "status": "same"
+        },
+        {
+          "id": "g",
+          "status": "same"
+        }
+      ],
+      "extra": []
+    },
+    "1": {
+      "label": "Remove [1] Identity & income",
+      "answer": [
+        {
+          "id": "a",
+          "status": "changed",
+          "text": "A valid passport or ID card",
+          "lost": "certificate of residence"
+        },
+        {
+          "id": "b",
+          "status": "changed",
+          "text": "Recent salary statements and your tax return",
+          "lost": "'last three'"
+        },
+        {
+          "id": "c",
+          "status": "same"
+        },
+        {
+          "id": "d",
+          "status": "same"
+        },
+        {
+          "id": "e",
+          "status": "same"
+        },
+        {
+          "id": "f",
+          "status": "same"
+        },
+        {
+          "id": "g",
+          "status": "same"
+        }
+      ],
+      "extra": []
+    },
+    "2": {
+      "label": "Remove [2] Creditworthiness",
+      "answer": [
+        {
+          "id": "a",
+          "status": "same"
+        },
+        {
+          "id": "b",
+          "status": "same"
+        },
+        {
+          "id": "c",
+          "status": "changed",
+          "text": "An extract from the debt enforcement register",
+          "lost": "'not older than three months'"
+        },
+        {
+          "id": "d",
+          "status": "gone"
+        },
+        {
+          "id": "e",
+          "status": "same"
+        },
+        {
+          "id": "f",
+          "status": "same"
+        },
+        {
+          "id": "g",
+          "status": "same"
+        }
+      ],
+      "extra": []
+    },
+    "3": {
+      "label": "Remove [3] Own funds",
+      "answer": [
+        {
+          "id": "a",
+          "status": "same"
+        },
+        {
+          "id": "b",
+          "status": "same"
+        },
+        {
+          "id": "c",
+          "status": "same"
+        },
+        {
+          "id": "d",
+          "status": "same"
+        },
+        {
+          "id": "e",
+          "status": "same",
+          "text": "Proof of own funds, usually at least 20% of the price, at most 10% from pension assets"
+        },
+        {
+          "id": "f",
+          "status": "same"
+        },
+        {
+          "id": "g",
+          "status": "same"
+        }
+      ],
+      "extra": []
+    },
+    "4": {
+      "label": "Remove [4] Property",
+      "answer": [
+        {
+          "id": "a",
+          "status": "same"
+        },
+        {
+          "id": "b",
+          "status": "same"
+        },
+        {
+          "id": "c",
+          "status": "same"
+        },
+        {
+          "id": "d",
+          "status": "same"
+        },
+        {
+          "id": "e",
+          "status": "same"
+        },
+        {
+          "id": "f",
+          "status": "same",
+          "text": "The purchase agreement and a land register extract"
+        },
+        {
+          "id": "g",
+          "status": "changed",
+          "text": "A valuation of the property",
+          "lost": "'Lakeside-approved valuer'"
+        }
+      ],
+      "extra": []
+    },
+    "all": {
+      "label": "Remove all sources (no policy at all)",
+      "answer": [
+        {
+          "id": "a",
+          "status": "changed",
+          "text": "A valid passport or ID card",
+          "lost": "certificate of residence"
+        },
+        {
+          "id": "b",
+          "status": "changed",
+          "text": "Recent salary statements and your tax return",
+          "lost": "'last three'"
+        },
+        {
+          "id": "c",
+          "status": "changed",
+          "text": "An extract from the debt enforcement register",
+          "lost": "'not older than three months'"
+        },
+        {
+          "id": "d",
+          "status": "gone"
+        },
+        {
+          "id": "e",
+          "status": "same",
+          "text": "Proof of own funds, usually at least 20% of the price, at most 10% from pension assets"
+        },
+        {
+          "id": "f",
+          "status": "same",
+          "text": "The purchase agreement and a land register extract"
+        },
+        {
+          "id": "g",
+          "status": "changed",
+          "text": "A valuation of the property",
+          "lost": "'Lakeside-approved valuer'"
+        }
+      ],
+      "extra": [
+        "A current pension fund statement",
+        "Proof of building insurance for the property"
+      ]
+    }
+  },
+  "truth": {
+    "a": {
+      "verdict": "Mostly general knowledge",
+      "detail": "Any LLM knows you need an ID. Only the certificate of residence came from [1]."
+    },
+    "b": {
+      "verdict": "Mostly general knowledge",
+      "detail": "Salary statements and tax return are standard. Only 'the last three' came from [1]."
+    },
+    "c": {
+      "verdict": "Mostly general knowledge",
+      "detail": "The debt enforcement extract is standard Swiss practice. Only 'not older than three months' came from [2]."
+    },
+    "d": {
+      "verdict": "From our policy",
+      "detail": "Form HB-12 exists only in our policy. Remove [2] and it disappears."
+    },
+    "e": {
+      "verdict": "General knowledge",
+      "detail": "20% own funds and max. 10% from the 2nd pillar are standard Swiss rules. The answer barely changes without [3]."
+    },
+    "f": {
+      "verdict": "General knowledge",
+      "detail": "Purchase agreement and land register extract are standard. Survives without [4]."
+    },
+    "g": {
+      "verdict": "Mixed",
+      "detail": "A valuation is standard; 'Lakeside-approved valuer' came from [4]."
+    }
+  }
+}
