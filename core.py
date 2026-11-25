@@ -146,13 +146,10 @@ def unlocked(page_key: str) -> bool:
     code = dict(_secret("unlock_codes", {}) or {}).get(page_key)
     if st.session_state.get(f"unlocked_{page_key}") or (code is None and page_key not in LOCKED_PAGES):
         return True
-    if code is None:
-        st.info("🔒 This step is locked. (Instructor: no code is set for it in the app's Secrets.)")
-        return False
     st.info("🔒 This step opens when your instructor gives you the code.")
     entered = st.text_input("Code", key=f"code_{page_key}", type="password")
     if entered:
-        if entered.strip().lower() == code.lower():
+        if code is not None and entered.strip().lower() == str(code).lower():
             st.session_state[f"unlocked_{page_key}"] = True
             st.rerun()
         else:
