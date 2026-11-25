@@ -19,6 +19,9 @@ def load():
 
 D = load()
 CASES, CATS = D["cases"], D["categories"]
+# Answer options are shown in a different order for each file, so the position gives nothing away.
+# Correct option lands at position 3 (File 1), 1 (File 2), 4 (File 3), 2 (File 4).
+OPTION_ORDER = {"A": [2, 3, 0, 1], "B": [1, 0, 3, 2], "C": [3, 0, 1, 2], "D": [0, 3, 2, 1]}
 PRESENTER = core.is_presenter()
 stage = st.session_state.setdefault("tr_stage", 3 if PRESENTER else 1)
 
@@ -87,7 +90,7 @@ with st.form(f"tr_form_{pick}"):
     f1, f2 = st.columns([1, 2])
     step = f1.selectbox("First step that went wrong", list(range(1, len(c["steps"]) + 1)), index=None,
                         placeholder="Step number", key=f"tr_step_{pick}")
-    cat = f2.radio("What kind of problem?", CATS, index=None, key=f"tr_cat_{pick}")
+    cat = f2.radio("What kind of problem?", [CATS[j] for j in OPTION_ORDER[pick]], index=None, key=f"tr_cat_{pick}")
     ok = st.form_submit_button("Check my answer", type="primary")
 
 if ok:
